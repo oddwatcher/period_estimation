@@ -12,7 +12,21 @@ from pathlib import Path
 
 date_strings = Path("date_strings.txt").read_text().splitlines()
 
-
+"""
+examples of data_strings.txt:
+2023.2.25 
+2023.3.29
+2023.4.29
+2023.6.2
+2023.7.4
+2023.8.9
+2023.9.11
+2023.10.9
+2023.11.9
+2023.12.13
+2024.1.20
+2024.2.19
+"""
 dates = sorted([datetime.strptime(d, "%Y.%m.%d") for d in date_strings])
 
 intervals = [(dates[i] - dates[i - 1]).days for i in range(1, len(dates))]
