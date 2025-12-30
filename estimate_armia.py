@@ -144,15 +144,7 @@ plt.figtext(
     ),
 )
 
-trend_desc = "Long-term trend shows slight increase in interval lengths\n"
-trend_desc += "Short-term fluctuations smoothed using Savitzky-Golay filter"
-plt.figtext(
-    0.15,
-    0.25,
-    trend_desc,
-    fontsize=11,
-    bbox=dict(facecolor="white", alpha=0.8, edgecolor="gray", boxstyle="round,pad=0.5"),
-)
 
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
+
